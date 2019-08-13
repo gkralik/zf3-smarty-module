@@ -38,7 +38,7 @@ class SmartyRendererFactory implements FactoryInterface
 
         $smartyEngine = new Smarty();
 
-        foreach ($options->getEngineOptions() as $option => $value) {
+        foreach ($options->getSmartyOptions() as $option => $value) {
             $setter = 'set' . str_replace(' ', '', ucwords(str_replace('_', ' ', $option)));
 
             if (method_exists($smartyEngine, $setter)) {

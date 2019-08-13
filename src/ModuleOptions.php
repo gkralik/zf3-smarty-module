@@ -37,7 +37,7 @@ final class ModuleOptions extends AbstractOptions
     private $configDir;
 
     /** @var array */
-    private $engineOptions;
+    private $smartyOptions;
 
     /**
      * @return string
@@ -106,16 +106,16 @@ final class ModuleOptions extends AbstractOptions
     /**
      * @return array
      */
-    public function getEngineOptions(): array
+    public function getSmartyOptions(): array
     {
-        return $this->engineOptions;
+        return $this->smartyOptions;
     }
 
     /**
-     * @param array $engineOptions
+     * @param array $smartyOptions
      */
-    public function setEngineOptions(array $engineOptions): void
+    public function setSmartyOptions(array $smartyOptions): void
     {
-        $this->engineOptions = $engineOptions;
+        $this->smartyOptions = $smartyOptions;
     }
 }
