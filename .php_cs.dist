@@ -1,0 +1,16 @@
+<?php
+
+$finder = PhpCsFixer\Finder::create()
+    ->in([
+        __DIR__ . '/config',
+        __DIR__ . '/src',
+    ]);
+
+return PhpCsFixer\Config::create()
+    ->setRules([
+        '@PSR2'        => true,
+        'array_syntax' => ['syntax' => 'short'],
+    ])
+    ->setUsingCache(true)
+    ->setCacheFile(__DIR__ . '/.php_cs.cache')
+    ->setFinder($finder);
