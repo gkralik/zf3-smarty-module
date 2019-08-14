@@ -25,7 +25,7 @@ use Zend\Stdlib\AbstractOptions;
 final class ModuleOptions extends AbstractOptions
 {
     /** @var string */
-    private $suffix;
+    private $suffix = 'tpl';
 
     /** @var string */
     private $compileDir;
@@ -34,13 +34,13 @@ final class ModuleOptions extends AbstractOptions
     private $cacheDir;
 
     /** @var ?string */
-    private $configDir;
+    private $configDir = null;
 
     /** @var bool */
     private $resetAssignedVariablesBeforeRender = true;
 
     /** @var array */
-    private $smartyOptions;
+    private $smartyOptions = [];
 
     /**
      * @return string
