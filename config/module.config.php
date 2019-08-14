@@ -38,6 +38,9 @@ return [
         'cache_dir'      => getcwd() . '/cache/templates',
         /** Path to smarty config file */
         'config_dir'     => null,
+        /** Clear all assigned variables before rendering a template
+         * (if false, variables from child models can spill into the layout). */
+        'reset_assigned_variables_before_render' => true,
         /** Additional smarty engine options */
         'smarty_options' => [],
     ],

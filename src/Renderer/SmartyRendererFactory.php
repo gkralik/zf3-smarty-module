@@ -55,6 +55,7 @@ class SmartyRendererFactory implements FactoryInterface
 
         $renderer = new SmartyRenderer($smartyEngine, $resolver);
         $renderer->setHelperPluginManager($container->get('ViewHelperManager'));
+        $renderer->setResetAssignedVariablesBeforeRender($options->shouldResetAssignedVariablesBeforeRender());
 
         return $renderer;
     }

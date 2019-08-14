@@ -36,6 +36,9 @@ final class ModuleOptions extends AbstractOptions
     /** @var ?string */
     private $configDir;
 
+    /** @var bool */
+    private $resetAssignedVariablesBeforeRender = true;
+
     /** @var array */
     private $smartyOptions;
 
@@ -101,6 +104,22 @@ final class ModuleOptions extends AbstractOptions
     public function setConfigDir(?string $configDir): void
     {
         $this->configDir = $configDir;
+    }
+
+    /**
+     * @return bool
+     */
+    public function shouldResetAssignedVariablesBeforeRender(): bool
+    {
+        return $this->resetAssignedVariablesBeforeRender;
+    }
+
+    /**
+     * @param bool $resetAssignedVariablesBeforeRender
+     */
+    public function setResetAssignedVariablesBeforeRender(bool $resetAssignedVariablesBeforeRender): void
+    {
+        $this->resetAssignedVariablesBeforeRender = $resetAssignedVariablesBeforeRender;
     }
 
     /**

@@ -21,6 +21,7 @@
 namespace GKralik\SmartyModule\Renderer;
 
 use ArrayObject;
+use GKralik\SmartyModule\ModuleOptions;
 use Smarty;
 use SmartyException;
 use Zend\ServiceManager\ServiceManager;
@@ -40,8 +41,27 @@ class SmartyRenderer implements RendererInterface
     /** @var ResolverInterface */
     private $resolver;
 
+    /** @var bool */
+    private $resetAssignedVariablesBeforeRender = true;
+
     /** @var HelperPluginManager */
     private $helperPluginManager;
+
+    /**
+     * @return bool
+     */
+    public function shouldResetAssignedVariablesBeforeRender()
+    {
+        return $this->resetAssignedVariablesBeforeRender;
+    }
+
+    /**
+     * @param bool $resetAssignedVariablesBeforeRender
+     */
+    public function setResetAssignedVariablesBeforeRender(bool $resetAssignedVariablesBeforeRender)
+    {
+        $this->resetAssignedVariablesBeforeRender = $resetAssignedVariablesBeforeRender;
+    }
 
     /** @var array Plugins cache. */
     private $pluginsCache;
@@ -152,7 +172,10 @@ class SmartyRenderer implements RendererInterface
 
         $values['this'] = $this;
 
-        $this->smarty->clearAllAssign();
+        if ($this->shouldResetAssignedVariablesBeforeRender()) {
+            $this->smarty->clearAllAssign();
+        }
+
         $this->smarty->assign($values);
 
         // add current dir to allow including partials without full path
