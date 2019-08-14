@@ -147,9 +147,9 @@ class SmartyRenderer implements RendererInterface
             }
 
             foreach ($model->getOptions() as $setting => $value) {
-                $method = 'set' . $setting;
-                if (method_exists($this, $method)) {
-                    call_user_func_array([$this, $method], [$value]);
+                $callable = [$this, 'set' . $setting];
+                if (is_callable($callable)) {
+                    call_user_func_array($callable, [$value]);
                 }
             }
             unset($setting, $value);

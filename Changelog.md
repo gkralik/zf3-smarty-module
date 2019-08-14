@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 ### Changed
 - Remove dead code in `SmartyRenderer::setHelperPluginManager()`
+- Use `is_callable()` before using `call_user_func_array`
 
 ## [1.0.0] - 2019-08-14
 ### Added
