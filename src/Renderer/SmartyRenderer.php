@@ -27,6 +27,7 @@ use SmartyException;
 use Zend\ServiceManager\ServiceManager;
 use Zend\View\Exception\DomainException;
 use Zend\View\Exception\InvalidArgumentException;
+use Zend\View\Helper\ViewModel as ViewModelHelper;
 use Zend\View\HelperPluginManager;
 use Zend\View\Model\ModelInterface;
 use Zend\View\Renderer\RendererInterface;
@@ -152,6 +153,11 @@ class SmartyRenderer implements RendererInterface
                 }
             }
             unset($setting, $value);
+
+            // give view model awareness via ViewModel helper
+            /** @var ViewModelHelper $helper */
+            $helper = $this->plugin('view_model');
+            $helper->setCurrent($model);
 
             $values = $model->getVariables();
             unset($model);
