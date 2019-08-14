@@ -65,7 +65,9 @@ class SmartyStrategy extends AbstractListenerAggregate
      */
     public function selectRenderer(ViewEvent $e)
     {
-        if (!$this->renderer->canRender($e->getModel()->getTemplate())) {
+        $model = $e->getModel();
+
+        if ($model === null || !$this->renderer->canRender($model->getTemplate())) {
             return false;
         }
 
