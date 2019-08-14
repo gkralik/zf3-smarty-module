@@ -199,23 +199,6 @@ class SmartyRenderer implements RendererInterface
      */
     public function setHelperPluginManager(HelperPluginManager $helperPluginManager)
     {
-        if (is_string($helperPluginManager)) {
-            if (! class_exists($helperPluginManager)) {
-                throw new InvalidArgumentException(sprintf(
-                    'Invalid helper plugin manager class provided (%s)',
-                    $helperPluginManager
-                ));
-            }
-            $helperPluginManager = new $helperPluginManager(new ServiceManager());
-        }
-
-        if (! $helperPluginManager instanceof HelperPluginManager) {
-            throw new InvalidArgumentException(sprintf(
-                'Helper plugin manager must extend Zend\View\HelperPluginManager; got type "%s" instead',
-                (is_object($helperPluginManager) ? get_class($helperPluginManager) : gettype($helperPluginManager))
-            ));
-        }
-
         $helperPluginManager->setRenderer($this);
         $this->helperPluginManager = $helperPluginManager;
 
@@ -223,12 +206,12 @@ class SmartyRenderer implements RendererInterface
     }
 
     /**
-     * @return \Zend\View\HelperPluginManager
+     * @return HelperPluginManager
      */
     public function getHelperPluginManager()
     {
         if ($this->helperPluginManager === null) {
-            $this->setHelperPluginManager(new \Zend\View\HelperPluginManager(new ServiceManager()));
+            $this->setHelperPluginManager(new HelperPluginManager(new ServiceManager()));
         }
 
         return $this->helperPluginManager;
