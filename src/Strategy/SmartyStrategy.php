@@ -88,6 +88,10 @@ class SmartyStrategy extends AbstractListenerAggregate
         $result = $e->getResult();
         $response = $e->getResponse();
 
+        if ($response === null) {
+            return;
+        }
+
         $response->setContent($result);
     }
 }
