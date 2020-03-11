@@ -20,7 +20,7 @@
 
 namespace GKralik\SmartyModule;
 
-use Zend\Stdlib\AbstractOptions;
+use Laminas\Stdlib\AbstractOptions;
 
 final class ModuleOptions extends AbstractOptions
 {

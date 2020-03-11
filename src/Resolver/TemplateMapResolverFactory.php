@@ -22,9 +22,9 @@ namespace GKralik\SmartyModule\Resolver;
 
 use GKralik\SmartyModule\ModuleOptions;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
-use Zend\View\Resolver\TemplateMapResolver;
-use Zend\View\Resolver\TemplateMapResolver as BaseTemplateMapResolver;
+use Laminas\ServiceManager\Factory\FactoryInterface;
+use Laminas\View\Resolver\TemplateMapResolver;
+use Laminas\View\Resolver\TemplateMapResolver as BaseTemplateMapResolver;
 
 class TemplateMapResolverFactory implements FactoryInterface
 {

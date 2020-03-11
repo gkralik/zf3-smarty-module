@@ -21,8 +21,8 @@
 namespace GKralik\SmartyModule\Resolver;
 
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
-use Zend\View\Resolver\AggregateResolver;
+use Laminas\ServiceManager\Factory\FactoryInterface;
+use Laminas\View\Resolver\AggregateResolver;
 
 class SmartyResolverFactory implements FactoryInterface
 {

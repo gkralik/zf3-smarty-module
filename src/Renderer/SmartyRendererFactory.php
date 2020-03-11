@@ -23,8 +23,8 @@ namespace GKralik\SmartyModule\Renderer;
 use GKralik\SmartyModule\ModuleOptions;
 use Interop\Container\ContainerInterface;
 use Smarty;
-use Zend\ServiceManager\Factory\FactoryInterface;
-use Zend\View\Resolver\ResolverInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
+use Laminas\View\Resolver\ResolverInterface;
 
 class SmartyRendererFactory implements FactoryInterface
 {

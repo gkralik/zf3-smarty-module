@@ -22,8 +22,8 @@ namespace GKralik\SmartyModule\Resolver;
 
 use GKralik\SmartyModule\ModuleOptions;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
-use Zend\View\Resolver\TemplatePathStack;
+use Laminas\ServiceManager\Factory\FactoryInterface;
+use Laminas\View\Resolver\TemplatePathStack;
 
 class TemplatePathStackResolverFactory implements FactoryInterface
 {

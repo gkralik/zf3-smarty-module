@@ -24,14 +24,14 @@ use ArrayObject;
 use GKralik\SmartyModule\ModuleOptions;
 use Smarty;
 use SmartyException;
-use Zend\ServiceManager\ServiceManager;
-use Zend\View\Exception\DomainException;
-use Zend\View\Exception\InvalidArgumentException;
-use Zend\View\Helper\ViewModel as ViewModelHelper;
-use Zend\View\HelperPluginManager;
-use Zend\View\Model\ModelInterface;
-use Zend\View\Renderer\RendererInterface;
-use Zend\View\Resolver\ResolverInterface;
+use Laminas\ServiceManager\ServiceManager;
+use Laminas\View\Exception\DomainException;
+use Laminas\View\Exception\InvalidArgumentException;
+use Laminas\View\Helper\ViewModel as ViewModelHelper;
+use Laminas\View\HelperPluginManager;
+use Laminas\View\Model\ModelInterface;
+use Laminas\View\Renderer\RendererInterface;
+use Laminas\View\Resolver\ResolverInterface;
 
 class SmartyRenderer implements RendererInterface
 {
@@ -254,7 +254,7 @@ class SmartyRenderer implements RendererInterface
      *
      * @param string $name Plugin name.
      * @param array $options Plugin options. Passed to the plugin constructor.
-     * @return \Zend\View\Helper\AbstractHelper
+     * @return \Laminas\View\Helper\AbstractHelper
      */
     public function plugin($name, array $options = null)
     {

@@ -22,7 +22,7 @@ namespace GKralik\SmartyModule\Strategy;
 
 use GKralik\SmartyModule\Renderer\SmartyRenderer;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 class SmartyStrategyFactory implements FactoryInterface
 {

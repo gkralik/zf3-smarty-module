@@ -21,9 +21,9 @@
 namespace GKralik\SmartyModule\Strategy;
 
 use GKralik\SmartyModule\Renderer\SmartyRenderer;
-use Zend\EventManager\AbstractListenerAggregate;
-use Zend\EventManager\EventManagerInterface;
-use Zend\View\ViewEvent;
+use Laminas\EventManager\AbstractListenerAggregate;
+use Laminas\EventManager\EventManagerInterface;
+use Laminas\View\ViewEvent;
 
 class SmartyStrategy extends AbstractListenerAggregate
 {
