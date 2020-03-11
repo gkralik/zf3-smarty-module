@@ -1,13 +1,17 @@
 # zf3-smarty-module
 
-This is a module for integrating the [Smarty](http://www.smarty.net) template engine with [Zend Framework 3](http://framework.zend.com).
+This is a module for integrating the [Smarty](http://www.smarty.net) template engine with [Laminas](https://getlaminas.org/) or Zend Framework 3](http://framework.zend.com).
+
+Version 2.x supports [Laminas](https://getlaminas.org/).
+
+Version 1.x supports [Zend Framework 3](http://framework.zend.com). See branch [1.x](https://github.com/gkralik/zf3-smarty-module/tree/1.x)
 
 ## Installation with Composer
 
 Installing via [Composer](http://getcomposer.org) is the only supported method.
 
 ```shell script
-composer require gkralik/zf3-smarty-module:dev-master
+composer require gkralik/zf3-smarty-module:2.0.0
 ```
 
 ## Configuration

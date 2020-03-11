@@ -1,6 +1,6 @@
 {
     "name": "gkralik/zf3-smarty-module",
-    "description": "ZF3 module providing a Smarty rendering strategy",
+    "description": "Laminas / ZF3 module providing a Smarty rendering strategy",
     "homepage": "https://www.github.com/gkralik/zf3-smarty-module",
     "license": "Apache-2.0",
     "authors": [
@@ -34,7 +34,7 @@
         "phpstan": "phpstan analyse"
     },
     "extra": {
-        "zf": {
+        "laminas": {
             "component": "GKralik\\SmartyModule"
         }
     }
