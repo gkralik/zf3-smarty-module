@@ -16,7 +16,7 @@
         "smarty/smarty": "^3.1",
         "laminas/laminas-view": "^2.0",
         "laminas/laminas-servicemanager": "^3.0",
-        "laminas/laminas-dependency-plugin": "^1.0"
+        "laminas/laminas-dependency-plugin": "^2.0"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.11.12",

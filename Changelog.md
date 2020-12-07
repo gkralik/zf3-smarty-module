@@ -2,9 +2,11 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+### Changed
+- Require `laminas/laminas-dependency-plugin:^2.0` to support Composer 2.
 
 ## [1.0.2] - 2019-10-03
-## Fixed
+### Fixed
 - Revert back to `method_exists()` instead of `is_callable()` to prevent calling non-existant methods.
 
 ## [1.0.1] - 2019-10-03
