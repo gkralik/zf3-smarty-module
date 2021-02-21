@@ -12,15 +12,15 @@
     ],
     "type": "library",
     "require": {
-        "php": "^7.1",
+        "php": "^7.1 || ~8.0.0",
         "smarty/smarty": "^3.1",
         "laminas/laminas-view": "^2.0",
         "laminas/laminas-servicemanager": "^3.0",
         "laminas/laminas-dependency-plugin": "^2.0"
     },
     "require-dev": {
-        "phpstan/phpstan": "^0.11.12",
-        "friendsofphp/php-cs-fixer": "^2.15"
+        "phpstan/phpstan": "^0.12.78",
+        "friendsofphp/php-cs-fixer": "^2.18"
     },
     "minimum-stability": "stable",
     "autoload": {

@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+### Changed
+- Add support for PHP 8.0
 
 ## [2.1.0] - 2020-12-07
 ### Changed
