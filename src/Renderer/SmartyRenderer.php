@@ -48,22 +48,6 @@ class SmartyRenderer implements RendererInterface
     /** @var HelperPluginManager */
     private $helperPluginManager;
 
-    /**
-     * @return bool
-     */
-    public function shouldResetAssignedVariablesBeforeRender()
-    {
-        return $this->resetAssignedVariablesBeforeRender;
-    }
-
-    /**
-     * @param bool $resetAssignedVariablesBeforeRender
-     */
-    public function setResetAssignedVariablesBeforeRender(bool $resetAssignedVariablesBeforeRender)
-    {
-        $this->resetAssignedVariablesBeforeRender = $resetAssignedVariablesBeforeRender;
-    }
-
     /** @var array Plugins cache. */
     private $pluginsCache;
 
@@ -103,6 +87,24 @@ class SmartyRenderer implements RendererInterface
     public function setResolver(ResolverInterface $resolver)
     {
         $this->resolver = $resolver;
+
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function shouldResetAssignedVariablesBeforeRender(): bool
+    {
+        return $this->resetAssignedVariablesBeforeRender;
+    }
+
+    /**
+     * @param bool $resetAssignedVariablesBeforeRender
+     */
+    public function setResetAssignedVariablesBeforeRender(bool $resetAssignedVariablesBeforeRender): SmartyRenderer
+    {
+        $this->resetAssignedVariablesBeforeRender = $resetAssignedVariablesBeforeRender;
 
         return $this;
     }
