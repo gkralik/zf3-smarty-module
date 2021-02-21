@@ -20,6 +20,7 @@
 
 namespace GKralik\SmartyModule\Renderer;
 
+use ArrayAccess;
 use ArrayObject;
 use GKralik\SmartyModule\ModuleOptions;
 use Smarty;
@@ -114,8 +115,10 @@ class SmartyRenderer implements RendererInterface
      *
      * A template can be rendered if the attached resolver can resolve the given
      * template name.
+     *
+     * @param string|ModelInterface $nameOrModel
      */
-    public function canRender($nameOrModel)
+    public function canRender($nameOrModel): bool
     {
         if ($nameOrModel instanceof ModelInterface) {
             $nameOrModel = $nameOrModel->getTemplate();
@@ -129,7 +132,7 @@ class SmartyRenderer implements RendererInterface
      * Processes a view script and returns the output.
      *
      * @param string|ModelInterface   $nameOrModel The script/resource process, or a view model
-     * @param null|array|\ArrayAccess $values      Values to use during rendering
+     * @param null|array|ArrayAccess<string, mixed> $values      Values to use during rendering
      *
      * @return string The script output.
      * @throws SmartyException

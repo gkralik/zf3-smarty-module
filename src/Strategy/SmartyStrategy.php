@@ -79,7 +79,7 @@ class SmartyStrategy extends AbstractListenerAggregate
      *
      * @param ViewEvent $e
      */
-    public function injectResponse(ViewEvent $e)
+    public function injectResponse(ViewEvent $e): void
     {
         $renderer = $e->getRenderer();
         if ($renderer !== $this->renderer) {

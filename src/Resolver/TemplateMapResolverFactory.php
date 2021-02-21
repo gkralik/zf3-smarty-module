@@ -33,7 +33,7 @@ class TemplateMapResolverFactory implements FactoryInterface
         /** @var ModuleOptions $options */
         $options = $container->get('GKralik\SmartyModule\ModuleOptions');
 
-        /** @var BaseTemplateMapResolver */
+        /** @var BaseTemplateMapResolver $templateMap */
         $templateMap = $container->get('ViewTemplateMapResolver');
 
         $suffix = $options->getSuffix();
