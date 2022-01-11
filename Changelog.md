@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [2.3.0] - 2022-01-11
 ### Changed
 - Add support for PHP 8.1
 
@@ -31,7 +33,8 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Initial version.
 
-[Unreleased]: https://github.com/gkralik/zf3-smarty-module/compare/2.2.0...HEAD
+[Unreleased]: https://github.com/gkralik/zf3-smarty-module/compare/2.3.0...HEAD
+[2.3.0]: https://github.com/gkralik/zf3-smarty-module/compare/2.2.0...2.3.0
 [2.2.0]: https://github.com/gkralik/zf3-smarty-module/compare/2.1.0...2.2.0
 [2.1.0]: https://github.com/gkralik/zf3-smarty-module/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/gkralik/zf3-smarty-module/compare/1.0.2...2.0.0
