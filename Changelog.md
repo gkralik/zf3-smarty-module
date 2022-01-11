@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+### Changed
+- Add support for PHP 8.1
 
 ## [2.2.0] - 2021-02-21
 ### Changed
