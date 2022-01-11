@@ -1,6 +1,6 @@
 # zf3-smarty-module
 
-This is a module for integrating the [Smarty](http://www.smarty.net) template engine with [Laminas](https://getlaminas.org/) or Zend Framework 3](http://framework.zend.com).
+This is a module for integrating the [Smarty](http://www.smarty.net) template engine with [Laminas](https://getlaminas.org/) or [Zend Framework 3](http://framework.zend.com).
 
 Version 2.x supports [Laminas](https://getlaminas.org/).
 
