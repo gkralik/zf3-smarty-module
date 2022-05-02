@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+### Fixed
+- Fix PHP 8.0 support in composer.json
 
 ## [2.3.0] - 2022-01-11
 ### Changed
