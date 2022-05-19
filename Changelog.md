@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+### Changed
+- Allow using Smarty v4
 
 ## [2.3.1] - 2022-05-02
 ### Fixed
